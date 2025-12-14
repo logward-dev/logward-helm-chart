@@ -11,6 +11,41 @@ entries:
           url: https://github.com/logward-dev/logward
     apiVersion: v2
     appVersion: 0.3.0
+    created: "2025-12-14T01:50:34.349716185Z"
+    description: A Helm chart for LogWard - Open-source log management and SIEM platform
+    digest: 03caf0d7a130f1a355705fc0334c6dd04495dbbb87b0e7023ece603a4441f031
+    home: https://logward.dev
+    icon: https://raw.githubusercontent.com/logward-dev/logward-helm-chart/main/charts/logward/icon.png
+    keywords:
+    - logging
+    - logs
+    - siem
+    - security
+    - observability
+    - monitoring
+    - timescaledb
+    - sigma
+    maintainers:
+    - email: team@logward.dev
+      name: LogWard Team
+      url: https://github.com/logward-dev
+    name: logward
+    sources:
+    - https://github.com/logward-dev/logward
+    type: application
+    urls:
+    - https://github.com/logward-dev/logward-helm-chart/releases/download/logward-1.0.4/logward-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      artifacthub.io/category: monitoring-logging
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://docs.logward.dev
+        - name: GitHub
+          url: https://github.com/logward-dev/logward
+    apiVersion: v2
+    appVersion: 0.3.0
     created: "2025-12-14T01:47:34.777073169Z"
     description: A Helm chart for LogWard - Open-source log management and SIEM platform
     digest: 92a5dd3025c5eeb6e481ae9a9cf80d15e6b37e1c9e86d0ee4c060d6371118215
@@ -71,4 +106,4 @@ entries:
     urls:
     - https://github.com/logward-dev/logward-helm-chart/releases/download/logward-1.0.2/logward-1.0.2.tgz
     version: 1.0.2
-generated: "2025-12-14T01:47:34.777087806Z"
+generated: "2025-12-14T01:50:34.349733343Z"
