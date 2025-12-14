@@ -114,14 +114,13 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-  # Update Artifact Hub metadata
-  artifacthub:
-    runs-on: ubuntu-latest
-    needs: release
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Update Artifact Hub
+      - name: Add artifacthub-repo.yml to gh-pages
         run: |
-          echo "Chart released! Artifact Hub will automatically sync from the gh-pages branch."
+          git checkout gh-pages
+          cp ${{ github.workspace }}/artifacthub-repo.yml . 2>/dev/null || curl -sL https://raw.githubusercontent.com/${{ github.repository }}/main/artifacthub-repo.yml -o artifacthub-repo.yml
+          if [ -f artifacthub-repo.yml ]; then
+            git add artifacthub-repo.yml
+            git diff --staged --quiet || git commit -m "Add artifacthub-repo.yml for verified publisher"
+            git push origin gh-pages
+          fi
+          git checkout main
